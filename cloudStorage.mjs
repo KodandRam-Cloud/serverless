@@ -46,8 +46,6 @@ const cloudStorage = (localFilePath, destinationPath) => {
               expires: expirationDate.getTime(),
             });
 
-            //console.log(`Authenticated URL for file (valid for 7 days): ${url}`);
-            
             // Resolve the promise with the signed URL
             resolve(url);
           });
