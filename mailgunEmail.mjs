@@ -23,45 +23,45 @@ const sendEmailConfirmation = async (userEmail, submissionUrl, assignmentStatus,
     if(assignmentStatus)
     {
         textData = `Dear ${userEmail},\n\n` +
-        `Your assignment has been submitted successfully. Please access your submission from the following link.\n` +
+        `We are delighted to inform you that your assignment has been successfully submitted. Access your submission through the following link:\n` +
         `Assignment Path: ${assignmentPath}\n\n` +
-        `If you encounter any issues or have questions, please contact us.\n\n` +
+        `Should you encounter any challenges or have questions, please don't hesitate to reach out to us.\n\n` +
         `Best regards,\n` +
         `Admin Team`;
         htmlData = `<p>Dear ${userEmail},</p>` +
-        `<p>Your assignment has been submitted successfully. Please access your submission from the following link.</p>` +
+        `<p>Your submission has been received successfully. Kindly access it through the provided link.</p>` +
         `<p><strong>Assignment Name:</strong> ${assignmentName} </p>` +
         `<p><strong>Downloadble Link:</strong> <a href="${assignmentPath}">Link</a> </p>` +
         `<p><strong>Cloud Storage Path:</strong> ${gcpPath}</p>` +
-        `<p>If you encounter any issues or have questions, please contact us.</p>` +
+        `Should you encounter any challenges or have questions, please don't hesitate to reach out to us.` +
         `<p>Best regards,<br/>Admin Team</p>`
     }
     else if(isValidUrl(submissionUrl) && submissionUrl.endsWith('.zip')){
         textData = `Dear ${userEmail},\n\n` +
-        `Your assignment submission encountered an issue. We were unable to access the zip file from submissionUR\n` +
-        `Please make sure the given submissionURL(.zip) is accessibe and resubmit it before the deadline.\n\n` +
+        `There was an issue with your assignment submission. We couldn't retrieve the zip file from the submission URL\n` +
+        `Kindly ensure that the provided submission URL (.zip) is accessible, and resubmit it before the deadline.\n\n` +
         `Assignment Name: ${assignmentName} \n\n` +
         `Submission URL: ${submissionUrl}\n\n` +
         `Best regards,\n` +
         `Admin Team`;
         htmlData = `<p>Dear ${userEmail},</p>` +
-        `<p>Your assignment submission encountered an issue. We were unable to access the zip file from submissionURL</p>` +
-        `<p>Please make sure the given submissionURL(.zip) is accessibe and resubmit it before the deadline.</p>` +
+        `<p>There was an issue with your assignment submission. We couldn't retrieve the zip file from the submission URL</p>` +
+        `<p>Kindly ensure that the provided submission URL (.zip) is accessible, and resubmit it before the deadline.</p>` +
         `<p><strong>Assignment Name:</strong> ${assignmentName} </p>` +
         `<p><strong>Submission URL:</strong> ${submissionUrl} </p>` +
-        `<p>If you encounter any issues or have questions, please contact us.</p>` +
+        `<p>Should you encounter any challenges or have questions, please don't hesitate to reach out to us.</p>` +
         `<p>Best regards,<br/>Admin Team</p>`
     }
     else{
         textData = `Dear ${userEmail},\n\n` +
-        `Your assignment submission encountered an issue. We were unable to access the zip file from submissionURL\n` +
+        `There was an issue with your assignment submission. We couldn't retrieve the zip file from the submission URL\n` +
         `Please validate the submission and resubmit it before the deadline.\n\n` +
         `Assignment Name: ${assignmentName} \n\n` +
         `Submission URL: ${submissionUrl}\n\n` +
         `Best regards,\n` +
         `Admin Team`;
         htmlData = `<p>Dear ${userEmail},</p>` +
-        `<p>Your assignment submission encountered an issue. We were unable to access the zip file from submissionURL</p>` +
+        `<p>There was an issue with your assignment submission. We couldn't retrieve the zip file from the submission URL</p>` +
         `<p>Please validate the submissionURL and resubmit it before the deadline.</p>` +
         `<p><strong>Assignment Name:</strong> ${assignmentName} </p>` +
         `<p><strong>Submission URL:</strong> ${submissionUrl} </p>` +
