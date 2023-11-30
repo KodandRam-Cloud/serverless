@@ -73,7 +73,7 @@ const sendEmailConfirmation = async (userEmail, submissionUrl, assignmentStatus,
     const mailData = {
         from: 'Admin <Admin@' + domain + '>',
         to: [userEmail],
-        cc: ['sanjaydatla49@gmail.com'],
+        cc: ['kodandram14@gmail.com'],
         subject: `Assignment submission status`,
         text: textData,
         html: htmlData
