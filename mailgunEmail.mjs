@@ -62,6 +62,7 @@ const sendEmailConfirmation = async (userEmail, submissionUrl, assignmentStatus,
         `Admin Team`;
         htmlData = `<p>Dear ${userEmail},</p>` +
         `<p>There was an issue with your assignment submission. We couldn't retrieve the zip file from the submission URL</p>` +
+        `<p>Your assignment submission encountered an issue. We were unable to access the zip file from submissionURL</p>` +
         `<p>Please validate the submissionURL and resubmit it before the deadline.</p>` +
         `<p><strong>Assignment Name:</strong> ${assignmentName} </p>` +
         `<p><strong>Submission URL:</strong> ${submissionUrl} </p>` +
