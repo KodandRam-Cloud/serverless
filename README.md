@@ -1,8 +1,6 @@
-# Mailgun Email Module
+# Serverless
 
-**Version: 1.0.0**
-
-The `mailgunEmail.mjs` module provides functionality to send email notifications using the Mailgun service. It is designed to handle different scenarios related to assignment submissions and communicates the status to the users. The module utilizes the Mailgun.js library for sending emails.
+The `Serverless` module provides functionality to send email notifications using the Mailgun service. It is designed to handle different scenarios related to assignment submissions and communicates the status to the users. The module utilizes the Mailgun.js library for sending emails.
 
 ## Prerequisites
 
